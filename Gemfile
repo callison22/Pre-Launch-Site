@@ -27,10 +27,12 @@ gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem "gibbon"
 
-group :production do
+group :production, :staging do
 	gem 'pg'
+	gem 'thin'
 end	
 
 group :development, :test do
 	gem 'sqlite3'
+
 end
