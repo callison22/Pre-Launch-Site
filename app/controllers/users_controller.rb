@@ -1,17 +1,3 @@
-<p>Hello <%= @resource.email %>!</p>
-
-<p>Your account has been locked due to an excessive amount of unsuccessful sign in attempts.</p>
-
-<p>Click the link below to unlock your account:</p>
-
-<p><%= link_to 'Unlock my account', unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>
-Bulk Invitations
-If you are selecting only a few dozen initial users, this process of manual selection will be adequate. If you are ready to launch and want to invite hundreds or thousands of users, you’ll need a way to invite multiple users with a single action. We need to implement a “bulk invitations” feature.
-
-You should set up an SMTP relay service such as Mandrill or SendGrid before you attempt to send more than a few dozen email messages. The Configuration chapter of this tutorial showed how to set up Mandrill. See the article Send Email with Rails for details.
-
-We’ll add a bulk_invite action to the controller file app/controllers/users_controller.rb:
-
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 

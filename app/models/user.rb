@@ -61,19 +61,19 @@ class User < ActiveRecord::Base
   private
 
   def add_user_to_mailchimp
-      return if email.include?(ENV['ADMIN_EMAIL'])
-      mailchimp = Gibbon.new
-      result = mailchimp.list_subscribe({
-        :id => ENV['MAILCHIMP_LIST_ID'],
-        :email_address => self.email,
-        :double_optin => false,
-        :update_existing => true,
-        :send_welcome => true
-        })
-      Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
-    rescue Gibbon::MailChimpError => e
-      Rails.logger.info("MailChimp subscribe failed for #{self.email}: " + e.message)
-    end
+    return if email.include?(ENV['ADMIN_EMAIL'])
+    mailchimp = Gibbon.new
+    result = mailchimp.list_subscribe({
+      :id => ENV['MAILCHIMP_LIST_ID'],
+      :email_address => self.email,
+      :double_optin => false,
+      :update_existing => true,
+      :send_welcome => true
+      })
+    Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
+  rescue Gibbon::MailChimpError => e
+    Rails.logger.info("MailChimp subscribe failed for #{self.email}: " + e.message)
+  end
 
   def remove_user_from_mailchimp
     mailchimp = Gibbon.new
