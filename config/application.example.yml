@@ -12,7 +12,7 @@ MANDRILL_API_KEY: NQMmtv2EpDqpzxGwT5cMEA
 MAILCHIMP_API_KEY: 7499a3d95a0e3dc04218362cd61a85c5-us7
 MAILCHIMP_LIST_ID: a00a9d5258
 ADMIN_NAME: Claire
-ADMIN_EMAIL: claire@caniborrowthis
+ADMIN_EMAIL: claire@caniborrowthis.com
 ADMIN_PASSWORD: cibt1402
 ROLES: [admin, user]
 EMAIL_ADDRESS: info@caniborrowthis.com
