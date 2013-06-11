@@ -9,3 +9,7 @@ $navbarBackground: white;
 
 @import 'bootstrap';
 
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
