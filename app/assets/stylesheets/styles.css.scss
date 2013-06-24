@@ -1,15 +1,10 @@
-$baseFontFamily: HARABARAHAND;
-@import url(http://www.fontsquirrel.com/fonts/HarabaraHand); 
+$baseFontFamily: 'Special Elite';
+@import url(http://fonts.googleapis.com/css?family=Special+Elite); 
 
-$baseFontSize: 16px;
+$baseFontSize: 20px;
+
 
 $btnPrimaryBackground: gray;
-$navbarBackgroundHighlight: white;
-$navbarBackground: white; 
 
 @import 'bootstrap';
-
-.navbar-inner {
-	@include box-shadow(none !important);
-	border: 0;
-}
+@import 'bootstrap-responsive'; 
