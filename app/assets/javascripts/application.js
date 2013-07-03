@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree .
+//= require bootstrap-alerts
+//= require bootstrap-modal
+
 $('document').ready(function() {
 
   // display validation errors for the "request invitation" form
@@ -67,3 +69,4 @@ function loadSocial() {
       $.getScript('https://apis.google.com/js/plusone.js');
     }
 }
+//= require_tree .
